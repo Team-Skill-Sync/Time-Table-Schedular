@@ -1,0 +1,5 @@
+before running the code please do install
+npm init -y
+npm install express mongoose body-parser express-session pdfkit exceljs
+npm install --save-dev nodemon
+nodemon server.js
