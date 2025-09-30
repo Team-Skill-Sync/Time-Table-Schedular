@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Timetable Generator</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="script.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+<nav class="bg-indigo-600 p-4 text-white flex justify-between items-center">
+  <h1 class="font-bold text-xl">Timetable Generator</h1>
+  <a href="principal.html" class="hover:underline">⬅ Dashboard</a>
+</nav>
+
+<div class="p-8 max-w-2xl mx-auto bg-white rounded shadow">
+  <h2 class="text-2xl font-bold mb-4">Generate Timetable</h2>
+
+  <!-- Form to add class & subjects -->
+  <div class="space-y-4">
+    <div>
+      <label class="block font-medium mb-1">Class Name</label>
+      <input type="text" id="classname" placeholder="Enter Class Name" class="w-full p-3 border rounded focus:ring-2 focus:ring-indigo-500">
+    </div>
+    <div>
+      <label class="block font-medium mb-1">Subjects (comma separated)</label>
+      <input type="text" id="subjects" placeholder="Math, Science, English" class="w-full p-3 border rounded focus:ring-2 focus:ring-indigo-500">
+    </div>
+    <button onclick="generateTimetable()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Generate Timetable</button>
+    <p id="message" class="text-green-600 mt-2"></p>
+  </div>
+
+  <!-- Display generated timetable -->
+  <div class="mt-8">
+    <h3 class="text-xl font-semibold mb-2">Current Timetable:</h3>
+    <div id="timetable"></div>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Principal Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-indigo-700 text-white flex justify-between items-center px-6 py-3 shadow-md">
+    <!-- Back Key -->
+    <a href="/" class="flex items-center space-x-2 hover:text-yellow-300">
+      <span class="text-lg">&#8592;</span>
+      <span>Back</span>
+    </a>
+
+    <div class="flex space-x-6">
+      <a href="/principal/timetable" class="hover:text-yellow-300">Generate Timetable</a>
+      <a href="/principal/approve-leave" class="hover:text-yellow-300">Approve Leave</a>
+      <a href="/principal/extra-class" class="hover:text-yellow-300">Approve Extra Class</a>
+      <a href="/principal/profile" class="hover:text-yellow-300">Profile</a>
+      <a href="/logout" class="hover:text-red-400 font-semibold">Logout</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-1 flex flex-col items-center justify-center p-8">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">
+      Welcome, <%= user.username %> 👋
+    </h1>
+    <p class="text-gray-600">Use the navbar to manage your school activities.</p>
+  </main>
+
+</body>
+</html>

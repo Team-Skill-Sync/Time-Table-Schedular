@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eduverse Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+  <form action="/login" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-lg w-96 text-white">
+    <h1 class="text-2xl font-bold text-yellow-400 mb-6 text-center">Eduverse Login</h1>
+
+    <% if (typeof error !== "undefined") { %>
+      <p class="bg-red-500 text-white p-2 rounded mb-4"><%= error %></p>
+    <% } %>
+
+    <label class="block mb-2">Username</label>
+    <input type="text" name="username" class="w-full p-2 rounded mb-4 text-black">
+
+    <label class="block mb-2">Password</label>
+    <input type="password" name="password" class="w-full p-2 rounded mb-6 text-black">
+
+    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 p-2 rounded text-white font-semibold">
+      Sign In
+    </button>
+  </form>
+
+</body>
+</html>
